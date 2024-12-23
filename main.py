@@ -22,7 +22,7 @@ from eth_account import Account
 from dotenv import load_dotenv
 import gdown
 import tempfile
-os.environ['PRIVATE_KEY'] = '0x2f072b4b59dbbd5799a2743d733e649701d7d3a7f7518d4189209d3a5f79a413'
+os.environ['PRIVATE_KEY'] = '0xc2a12ea9d8e4dc226270d2d7aee56c4292f9a50ca3a794698fdc5e0853c3b7f4'
 # Load environment variables
 load_dotenv()
 
@@ -39,7 +39,7 @@ if not w3.is_connected():
     raise Exception("Failed to connect to BSC testnet")
 
 # Contract setup
-CONTRACT_ADDRESS = "0xF7633b441a9526b0e4e81329CfA5195A0632b696"
+CONTRACT_ADDRESS = "0xA546819d48330FB2E02D3424676d13D7B8af3bB2"
 CONTRACT_ABI = json.loads('[{"inputs":[],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"recipient","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"FundsSent","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"user","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"}],"name":"Staked","type":"event"},{"inputs":[],"name":"STAKE_AMOUNT","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address payable","name":"recipient","type":"address"}],"name":"sendFundsTo","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"stake","outputs":[],"stateMutability":"payable","type":"function"},{"inputs":[],"name":"withdraw","outputs":[],"stateMutability":"nonpayable","type":"function"}]')
 
 # Initialize contract
